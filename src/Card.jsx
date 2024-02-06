@@ -10,8 +10,17 @@ img{
   width:20vw;
   border-radius:20px;
   height:30vh;
+  &:hover{
+    @media (max-width: 768px) {
+      width:50vw;
+      height:20vh
+    }
+  }
 }
-
+@media (max-width: 768px) {
+  width:50vw;
+  height:20vh
+}
 `
 const ImageWrapper = styled.div`
 width:20vw;
@@ -24,6 +33,10 @@ display:none;
 z-index:1;
 &:hover{
   display:none;
+}
+@media (max-width: 768px) {
+  width:50vw;
+  height:10vh
 }
 `
 const CardMainContainer = styled.div`
@@ -43,6 +56,11 @@ padding:0;
   height:50vh;
   ${ImageContainer}:hover + ${ImageWrapper} {
     display: block;
+  }
+
+  @media (max-width: 768px) {
+    width:50vw;
+    height:30vh
   }
 }
 `
